@@ -53,16 +53,7 @@ export const Head = () => <Seo title="Home" />
 export default IndexPage
 
 export const query = graphql`
-  query {
-    fileInformation: allFile {
-      edges {
-        node {
-          id
-          base
-          prettySize
-        }
-      }
-    }
+  query {    
     travelLocations: allMarkdownRemark(sort: { frontmatter: { title: ASC } }) {
       edges {
         node {

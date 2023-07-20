@@ -51,6 +51,12 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-plugin-slug`,
     {
+      resolve: "gatsby-plugin-categories",
+      options: {
+        templatePath: `${__dirname}/src/templates/category.js`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,

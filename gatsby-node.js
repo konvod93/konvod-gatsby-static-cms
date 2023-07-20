@@ -19,6 +19,8 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
 
   
+  
+  
   data.allMarkdownRemark.nodes.forEach(node => {
     const { url, category } = node.frontmatter;
     actions.createPage({
@@ -27,6 +29,7 @@ exports.createPages = async ({ graphql, actions }) => {
       context: { url }
     })
   })
+  
 }
 const express= require('express');
 
